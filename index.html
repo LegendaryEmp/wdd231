@@ -1,11 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Jacob Okwusi Mbabo | WDD 231 Course Home</title>
+    <meta name="description" content="Explore LegendaryEmp's WDD 231 course home, web development projects, and Web and Computer Programming certificate courses.">
+    <meta name="author" content="LegendaryEmp">
+    <link rel="icon" href="images/logo.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/course.js" defer></script>
 </head>
+
 <body>
-    
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header class="site-header">
+        <a class="brand" href="./" aria-label="LegendaryEmp home">
+            <img src="images/logo.svg" alt="" width="48" height="48">
+            <span>Jacob Okwusi Mbabo</span>
+        </a>
+        <button class="menu-toggle" type="button" aria-label="Open navigation" aria-controls="primary-navigation" aria-expanded="false" hidden>
+            <span class="menu-icon" aria-hidden="true"></span>
+        </button>
+    </header>
+
+    <nav class="site-navigation" id="primary-navigation" aria-label="Primary navigation">
+        <ul class="navigation-links">
+            <li><a href="./" aria-current="page">Home</a></li>
+            <li><a href="chamber/">Chamber Project</a></li>
+            <li><a href="final/">Final Project</a></li>
+        </ul>
+    </nav>
+
+    <main id="main-content">
+        <h1>Home</h1>
+
+        <div class="profile-grid">
+            <section class="panel about" aria-labelledby="about-heading">
+                <h2 id="about-heading">About Me</h2>
+                <div class="about-content">
+                    <p class="introduction">Learning, one project at a time.</p>
+                    <p>Welcome to my course home page. I am studying web development and building my skills in HTML, CSS, and JavaScript through practical projects.</p>
+                    <p>This site brings together my work for WDD 231. You can explore my projects and browse the courses in the Web and Computer Programming certificate below.</p>
+                    <p>I am learning how thoughtful design and well-written code work together to make websites accessible, responsive, and easy to use.</p>
+                </div>
+            </section>
+
+            <section class="panel student-photo" aria-labelledby="photo-heading">
+                <h2 id="photo-heading">Student Photo</h2>
+                <div class="photo-content">
+                    <img src="images/portriat.png" alt="Portrait of LegendaryEmp" width="434" height="579" fetchpriority="high">
+                </div>
+            </section>
+        </div>
+
+        <section class="panel certificate" aria-labelledby="certificate-heading">
+            <h2 id="certificate-heading">Web Certificate Courses</h2>
+            <div class="certificate-content">
+                <p class="certificate-name">Web and Computer Programming</p>
+                <div class="course-filters" role="group" aria-label="Filter courses by subject">
+                    <button type="button" data-filter="all" aria-pressed="true" aria-controls="course-list">All</button>
+                    <button type="button" data-filter="CSE" aria-pressed="false" aria-controls="course-list">CSE</button>
+                    <button type="button" data-filter="WDD" aria-pressed="false" aria-controls="course-list">WDD</button>
+                </div>
+                <ul class="course-list" id="course-list" aria-label="Certificate courses"></ul>
+                <p class="credit-summary" id="credit-summary" role="status" aria-live="polite" aria-atomic="true"></p>
+                <noscript><p>Enable JavaScript to view and filter the certificate courses and their credit totals.</p></noscript>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="social-links" aria-label="Social links">
+            <a href="https://www.linkedin.com/in/jmbabo/" aria-label="LinkedIn">
+                <img src="images/linkedin.svg" alt="" width="28" height="28">
+            </a>
+            <a href="https://github.com/LegendaryEmp/wdd231" aria-label="GitHub repository">
+                <img src="images/github.svg" alt="" width="28" height="28">
+            </a>
+            <a href="https://x.com/Legendaryemp" aria-label="X">
+                <img src="images/x.svg" alt="" width="28" height="28">
+            </a>
+        </div>
+        <div class="footer-details">
+            <p><span id="currentyear"></span> <span>Jacob Okwusi Mbabo</span> <span aria-hidden="true">&bull;</span> <span>Nigeria</span></p>
+            <p id="lastModified"></p>
+        </div>
+    </footer>
 </body>
+
 </html>
