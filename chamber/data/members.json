@@ -1,0 +1,82 @@
+[
+    {
+        "name": "Bonny Bay Logistics",
+        "tagline": "Moving commerce across the Niger Delta",
+        "address": "14 Harbour Road, Port Harcourt",
+        "phone": "+234 803 555 0142",
+        "phoneLink": "tel:+2348035550142",
+        "website": "https://example.com/",
+        "image": "images/bonny-bay.svg",
+        "membershipLevel": 3
+    },
+    {
+        "name": "Garden City Digital Hub",
+        "tagline": "Technology and talent for growing teams",
+        "address": "22 Olu Obasanjo Road, Port Harcourt",
+        "phone": "+234 805 555 0176",
+        "phoneLink": "tel:+2348055550176",
+        "website": "https://example.com/",
+        "image": "images/garden-city-digital.svg",
+        "membershipLevel": 2
+    },
+    {
+        "name": "Rivergate Energy Services",
+        "tagline": "Reliable solutions for modern industry",
+        "address": "8 Trans-Amadi Industrial Layout, Port Harcourt",
+        "phone": "+234 809 555 0118",
+        "phoneLink": "tel:+2348095550118",
+        "website": "https://example.com/",
+        "image": "images/rivergate-energy.svg",
+        "membershipLevel": 3
+    },
+    {
+        "name": "Creekside Foods & Catering",
+        "tagline": "Fresh local flavour for every gathering",
+        "address": "31 Peter Odili Road, Port Harcourt",
+        "phone": "+234 810 555 0135",
+        "phoneLink": "tel:+2348105550135",
+        "website": "https://example.com/",
+        "image": "images/creekside-foods.svg",
+        "membershipLevel": 2
+    },
+    {
+        "name": "Trans-Amadi Printworks",
+        "tagline": "Print, signage, and branded experiences",
+        "address": "5 Nkpogu Road, Port Harcourt",
+        "phone": "+234 706 555 0181",
+        "phoneLink": "tel:+2347065550181",
+        "website": "https://example.com/",
+        "image": "images/trans-amadi-print.svg",
+        "membershipLevel": 1
+    },
+    {
+        "name": "Eastern Bypass Auto Care",
+        "tagline": "Professional care that keeps business moving",
+        "address": "44 Eastern Bypass, Port Harcourt",
+        "phone": "+234 812 555 0106",
+        "phoneLink": "tel:+2348125550106",
+        "website": "https://example.com/",
+        "image": "images/eastern-bypass-auto.svg",
+        "membershipLevel": 2
+    },
+    {
+        "name": "Niger Delta Eco Tours",
+        "tagline": "Discover the waterways and stories of Rivers",
+        "address": "12 Abonnema Wharf Road, Port Harcourt",
+        "phone": "+234 816 555 0193",
+        "phoneLink": "tel:+2348165550193",
+        "website": "https://example.com/",
+        "image": "images/niger-delta-tours.svg",
+        "membershipLevel": 3
+    },
+    {
+        "name": "Harbour View Legal Partners",
+        "tagline": "Clear counsel for confident decisions",
+        "address": "7 Forces Avenue, Old GRA, Port Harcourt",
+        "phone": "+234 818 555 0154",
+        "phoneLink": "tel:+2348185550154",
+        "website": "https://example.com/",
+        "image": "images/harbour-view-legal.svg",
+        "membershipLevel": 1
+    }
+]
