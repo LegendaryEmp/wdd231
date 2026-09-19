@@ -1,5 +1,5 @@
 const weatherContainer = document.querySelector("#weather-content");
-const apiKey = "REPLACE_WITH_YOUR_OPENWEATHER_API_KEY";
+const apiKey = "e925e2088e406b5a6cccfeda77ef578f";
 const latitude = 4.77742;
 const longitude = 7.0134;
 
