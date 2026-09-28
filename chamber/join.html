@@ -22,6 +22,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
     <script src="scripts/navigation.js" defer></script>
     <script src="scripts/dates.js" defer></script>
+    <script src="scripts/join.js" defer></script>
 </head>
 
 <body>
@@ -35,11 +36,136 @@
             </nav>
         </div>
     </header>
-    <main class="placeholder-main" id="main-content">
-        <p class="eyebrow">Membership</p>
-        <h1>Grow with our business community</h1>
-        <p>Membership benefits and the application form will be completed in a future project milestone. Explore the member directory while this page is prepared.</p>
-        <a class="button button-primary" href="directory.html">Meet our members</a>
+    <main class="page-shell join-main" id="main-content">
+        <div class="directory-intro">
+            <p class="eyebrow">Build connections. Grow together.</p>
+            <h1>Join the chamber</h1>
+            <p>Connect your organization with the people and opportunities shaping Port Harcourt.</p>
+        </div>
+        <div class="join-layout">
+            <section class="application-panel" aria-labelledby="application-heading">
+                <h2 id="application-heading">Membership application</h2>
+                <p class="form-note">Fields marked with an asterisk (*) are required.</p>
+                <form class="membership-form" method="get" action="thankyou.html">
+                    <fieldset>
+                        <legend>Your details</legend>
+                        <div class="name-fields">
+                            <label>First name *
+                                <input type="text" name="first-name" title="Enter your first name" autocomplete="given-name" required>
+                            </label>
+                            <label>Last name *
+                                <input type="text" name="last-name" title="Enter your last name" autocomplete="family-name" required>
+                            </label>
+                        </div>
+                        <label>Email address *
+                            <input type="email" name="email" title="Enter your email address" autocomplete="email" placeholder="name@example.com" required>
+                        </label>
+                        <label>Mobile phone number *
+                            <input type="tel" name="phone" title="Enter your mobile phone number" autocomplete="tel" required>
+                        </label>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Your organization</legend>
+                        <label>Business or organization name *
+                            <input type="text" name="organization" title="Enter your business or organization name" autocomplete="organization" required>
+                        </label>
+                        <label>Organizational title (optional)
+                            <input type="text" name="organization-title" title="Use at least 7 characters: letters, spaces, or hyphens only" autocomplete="organization-title" pattern="[A-Za-z \-]{7,}" aria-describedby="title-hint">
+                        </label>
+                        <p class="field-hint" id="title-hint">At least 7 characters using letters, spaces, or hyphens. Example: Business Owner.</p>
+                        <label>Membership level *
+                            <select name="membership" title="Choose your membership level" autocomplete="off" required>
+                                <option value="" selected disabled>Select a membership</option>
+                                <option value="np">NP Membership — no fee</option>
+                                <option value="bronze">Bronze — ₦25,000 / year</option>
+                                <option value="silver">Silver — ₦50,000 / year</option>
+                                <option value="gold">Gold — ₦100,000 / year</option>
+                            </select>
+                        </label>
+                        <label>Business description (optional)
+                            <textarea name="description" title="Describe your business or organization" autocomplete="off" rows="4"></textarea>
+                        </label>
+                    </fieldset>
+                    <input type="hidden" id="timestamp" name="timestamp" title="Application form load time">
+                    <input class="button button-primary application-submit" type="submit" name="submit" title="Submit your membership application" value="Submit application">
+                </form>
+            </section>
+            <section class="membership-levels" aria-labelledby="levels-heading">
+                <h2 id="levels-heading">Find your membership</h2>
+                <p class="levels-note">Compare annual fees and benefits.</p>
+                <article class="level-card">
+                    <h3>NP Membership</h3>
+                    <p class="level-price">No fee</p>
+                    <p>For nonprofit organizations serving our community.</p>
+                    <button type="button" class="benefits-button" data-dialog="np-benefits" aria-haspopup="dialog">View NP Membership benefits</button>
+                </article>
+                <article class="level-card">
+                    <h3>Bronze Membership</h3>
+                    <p class="level-price">₦25,000 / year</p>
+                    <p>A starting point for growing local businesses.</p>
+                    <button type="button" class="benefits-button" data-dialog="bronze-benefits" aria-haspopup="dialog">View Bronze Membership benefits</button>
+                </article>
+                <article class="level-card">
+                    <h3>Silver Membership</h3>
+                    <p class="level-price">₦50,000 / year</p>
+                    <p>More opportunities to connect and be seen.</p>
+                    <button type="button" class="benefits-button" data-dialog="silver-benefits" aria-haspopup="dialog">View Silver Membership benefits</button>
+                </article>
+                <article class="level-card">
+                    <h3>Gold Membership</h3>
+                    <p class="level-price">₦100,000 / year</p>
+                    <p>Our highest level of visibility and support.</p>
+                    <button type="button" class="benefits-button" data-dialog="gold-benefits" aria-haspopup="dialog">View Gold Membership benefits</button>
+                </article>
+            </section>
+        </div>
+        <dialog class="membership-dialog" id="np-benefits" aria-labelledby="np-heading">
+            <h2 id="np-heading">NP Membership</h2>
+            <p class="level-price">No fee</p>
+            <p>For nonprofit organizations serving our community.</p>
+            <ul>
+                <li>A listing in the business directory</li>
+                <li>Invitations to community networking events</li>
+                <li>Access to the monthly chamber newsletter</li>
+            </ul>
+            <button class="dialog-close" type="button" autofocus>Close benefits</button>
+        </dialog>
+        <dialog class="membership-dialog" id="bronze-benefits" aria-labelledby="bronze-heading">
+            <h2 id="bronze-heading">Bronze Membership</h2>
+            <p class="level-price">₦25,000 / year</p>
+            <p>A starting point for growing local businesses.</p>
+            <ul>
+                <li>All NP membership benefits</li>
+                <li>Two business training sessions each year</li>
+                <li>A 5% discount on paid chamber events</li>
+            </ul>
+            <button class="dialog-close" type="button" autofocus>Close benefits</button>
+        </dialog>
+        <dialog class="membership-dialog" id="silver-benefits" aria-labelledby="silver-heading">
+            <h2 id="silver-heading">Silver Membership</h2>
+            <p class="level-price">₦50,000 / year</p>
+            <p>More opportunities to connect and be seen.</p>
+            <ul>
+                <li>All Bronze membership benefits</li>
+                <li>Eligibility for rotating home page spotlights</li>
+                <li>Four business training sessions each year</li>
+                <li>A 10% discount on paid chamber events</li>
+            </ul>
+            <button class="dialog-close" type="button" autofocus>Close benefits</button>
+        </dialog>
+        <dialog class="membership-dialog" id="gold-benefits" aria-labelledby="gold-heading">
+            <h2 id="gold-heading">Gold Membership</h2>
+            <p class="level-price">₦100,000 / year</p>
+            <p>Our highest level of visibility and support.</p>
+            <ul>
+                <li>All Silver membership benefits</li>
+                <li>Priority placement in rotating home page spotlights</li>
+                <li>A featured advertisement in the chamber newsletter</li>
+                <li>Access to all business training sessions</li>
+                <li>A 20% discount on paid chamber events</li>
+            </ul>
+            <button class="dialog-close" type="button" autofocus>Close benefits</button>
+        </dialog>
     </main>
     <footer class="site-footer">
         <div class="footer-content">

@@ -117,3 +117,32 @@
         grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 }
+
+@media (min-width: 700px) {
+    .join-layout {
+        grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
+        gap: 28px;
+    }
+
+    .application-details > div {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1.7fr);
+        gap: 20px;
+    }
+
+    .application-details dd {
+        margin-top: 0;
+    }
+}
+
+@media (min-width: 960px) {
+    .join-layout {
+        gap: 48px;
+    }
+
+    .name-fields {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+    }
+}

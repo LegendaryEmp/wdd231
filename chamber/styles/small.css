@@ -816,3 +816,262 @@ h3 {
     min-height: 28px;
     padding-block: 4px;
 }
+
+.join-layout {
+    display: grid;
+    gap: 32px;
+    margin-top: 32px;
+    align-items: start;
+}
+
+.application-panel {
+    min-width: 0;
+    padding: clamp(18px, 3vw, 32px);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: var(--white);
+    box-shadow: var(--shadow);
+}
+
+.application-panel h2,
+.membership-levels > h2 {
+    margin: 0;
+    font-size: 1.4rem;
+}
+
+.form-note,
+.levels-note {
+    margin: 10px 0 24px;
+    color: var(--muted);
+    font-size: 0.88rem;
+}
+
+.membership-form fieldset {
+    min-width: 0;
+    margin: 0 0 26px;
+    padding: 0;
+    border: 0;
+}
+
+.membership-form legend {
+    width: 100%;
+    margin-bottom: 18px;
+    padding: 0 0 8px;
+    border-bottom: 1px solid var(--line);
+    color: var(--navy);
+    font-weight: 800;
+}
+
+.membership-form label {
+    display: block;
+    margin-bottom: 18px;
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+.membership-form input:not([type="hidden"], [type="submit"]),
+.membership-form select,
+.membership-form textarea {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    min-height: 48px;
+    margin-top: 6px;
+    padding: 11px 12px;
+    border: 1px solid var(--muted);
+    border-radius: 6px;
+    background: var(--white);
+    color: var(--slate);
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.membership-form input::placeholder {
+    color: var(--muted);
+    opacity: 1;
+}
+
+.membership-form textarea {
+    resize: vertical;
+}
+
+.membership-form :focus-visible,
+.benefits-button:focus-visible,
+.dialog-close:focus-visible,
+.confirmation-actions a:focus-visible {
+    outline: 3px solid var(--navy-light);
+    outline-offset: 3px;
+}
+
+.membership-form :user-invalid {
+    border-color: #a32121;
+    border-width: 2px;
+}
+
+.field-hint {
+    margin: -10px 0 20px;
+    color: var(--muted);
+    font-size: 0.8rem;
+}
+
+.application-submit {
+    width: 100%;
+    border: 0;
+    cursor: pointer;
+    box-shadow: none;
+}
+
+.level-card {
+    margin-top: 16px;
+    padding: 22px;
+    border: 1px solid var(--line);
+    border-left: 5px solid var(--navy-light);
+    border-radius: var(--radius);
+    background: var(--white);
+    animation: welcome-card 550ms ease-out both;
+}
+
+.level-card:nth-of-type(2) {
+    animation-delay: 100ms;
+    border-left-color: #87552e;
+}
+
+.level-card:nth-of-type(3) {
+    animation-delay: 200ms;
+    border-left-color: #647685;
+}
+
+.level-card:nth-of-type(4) {
+    animation-delay: 300ms;
+    border-left-color: var(--gold-dark);
+    background: #fffaec;
+}
+
+.level-card h3 {
+    margin: 0;
+    font-size: 1.16rem;
+}
+
+.level-card p {
+    margin: 8px 0 14px;
+    font-size: 0.88rem;
+}
+
+.level-price {
+    color: var(--gold-dark);
+    font-weight: 800;
+}
+
+.benefits-button,
+.dialog-close {
+    min-height: 44px;
+    padding: 9px 14px;
+    border: 1px solid var(--navy);
+    border-radius: 6px;
+    background: var(--navy);
+    color: var(--white);
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.benefits-button:hover,
+.dialog-close:hover {
+    background: var(--navy-light);
+}
+
+.membership-dialog {
+    width: min(100% - 32px, 520px);
+    max-height: calc(100% - 48px);
+    margin: auto;
+    padding: 28px;
+    overflow-y: auto;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: var(--white);
+    color: var(--slate);
+    box-shadow: var(--shadow);
+}
+
+.membership-dialog::backdrop {
+    background: rgb(8 29 45 / 72%);
+}
+
+.membership-dialog h2 {
+    margin-top: 0;
+}
+
+.membership-dialog ul {
+    padding-left: 22px;
+    margin-block: 20px;
+}
+
+.membership-dialog li {
+    margin-bottom: 10px;
+}
+
+.thankyou-main {
+    min-height: 65vh;
+}
+
+.confirmation-panel {
+    max-width: 760px;
+    margin-top: 28px;
+}
+
+.application-details {
+    margin-bottom: 0;
+}
+
+.application-details > div {
+    padding-block: 13px;
+    border-bottom: 1px solid var(--line);
+    overflow-wrap: anywhere;
+}
+
+.application-details > div:last-child {
+    border-bottom: 0;
+}
+
+.application-details dt {
+    color: var(--muted);
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.application-details dd {
+    margin: 4px 0 0;
+}
+
+.confirmation-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 28px;
+}
+
+.return-link {
+    color: var(--navy);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+@keyframes welcome-card {
+    from {
+        opacity: 0;
+        transform: translateY(14px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    .level-card {
+        animation: none;
+    }
+}
