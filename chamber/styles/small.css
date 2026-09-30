@@ -1,11 +1,3 @@
-@font-face {
-    font-family: "Manrope";
-    font-style: normal;
-    font-weight: 200 800;
-    font-display: swap;
-    src: url("../fonts/manrope-latin.woff2") format("woff2");
-}
-
 :root {
     --navy: #102a43;
     --navy-light: #1d4867;
@@ -16,31 +8,34 @@
     --slate: #243b53;
     --muted: #52677a;
     --line: #d6e0e7;
-    --success: #2b6b4f;
     --radius: 14px;
-    --shadow: 0 14px 36px rgb(16 42 67 / 10%);
-}
-
-* {
-    box-sizing: border-box;
+    --shadow: 0 14px 36px #102a431a;
 }
 
 html {
     scroll-behavior: smooth;
 }
 
-body {
-    margin: 0;
+body,
+.loading-message,
+.error-message,
+.forecast-list li {
     background: var(--mist);
+}
+
+body,
+.featured-event .event-meta,
+.membership-dialog {
     color: var(--slate);
+}
+
+body {
     font-family: "Manrope", Arial, sans-serif;
     line-height: 1.6;
 }
 
 img {
     display: block;
-    max-width: 100%;
-    height: auto;
 }
 
 a {
@@ -52,8 +47,22 @@ a {
     -webkit-tap-highlight-color: transparent;
 }
 
-button {
-    font: inherit;
+.skip-link,
+.primary-navigation a,
+.benefits-button,
+.dialog-close {
+    border-radius: 6px;
+}
+
+.skip-link,
+.button-primary,
+.current-temperature,
+.forecast-title,
+.forecast-list strong,
+.directory-toolbar button,
+.membership-form legend,
+.return-link {
+    color: var(--navy);
 }
 
 .skip-link {
@@ -62,9 +71,7 @@ button {
     top: 8px;
     left: 8px;
     padding: 10px 14px;
-    border-radius: 6px;
     background: var(--gold);
-    color: var(--navy);
     font-weight: 800;
     transform: translateY(-150%);
 }
@@ -73,11 +80,31 @@ button {
     transform: translateY(0);
 }
 
+.site-header,
+.featured-event > time,
+.site-footer,
+.benefits-button,
+.dialog-close,
+.visit-message {
+    background: var(--navy);
+}
+
+.site-header,
+.brand,
+.menu-toggle,
+.hero-content,
+.hero h1,
+.featured-event > time,
+.footer-contact strong,
+.benefits-button,
+.dialog-close,
+.visit-message {
+    color: var(--white);
+}
+
 .site-header {
     position: relative;
     z-index: 20;
-    background: var(--navy);
-    color: var(--white);
 }
 
 .masthead {
@@ -94,7 +121,6 @@ button {
     align-items: center;
     gap: 11px;
     width: fit-content;
-    color: var(--white);
     font-size: clamp(1rem, 4vw, 1.25rem);
     font-weight: 800;
     line-height: 1.15;
@@ -114,15 +140,23 @@ button {
     letter-spacing: 0.02em;
 }
 
+.menu-toggle,
+.featured-event > time,
+.loading-message,
+.error-message,
+.visit-message,
+.discover-card figure,
+.photo-credits {
+    border-radius: 8px;
+}
+
 .menu-toggle {
     display: grid;
     place-items: center;
     width: 46px;
     height: 46px;
-    border: 1px solid rgb(255 255 255 / 35%);
-    border-radius: 8px;
+    border: 1px solid #ffffff59;
     background: transparent;
-    color: var(--white);
     cursor: pointer;
 }
 
@@ -132,7 +166,7 @@ button {
     display: block;
     width: 23px;
     height: 2px;
-    background: currentcolor;
+    background: #ffffff;
     content: "";
     transition: transform 180ms ease;
 }
@@ -174,22 +208,31 @@ button {
     gap: 2px;
     margin: 12px 0 0;
     padding: 0;
-    border-top: 1px solid rgb(255 255 255 / 16%);
+    border-top: 1px solid #ffffff29;
     list-style: none;
+}
+
+.primary-navigation a,
+.forecast-list time,
+.member-details a,
+.membership-form label,
+.benefits-button,
+.dialog-close,
+.application-details dt,
+.photo-credits summary {
+    font-weight: 700;
 }
 
 .primary-navigation a {
     display: block;
     padding: 13px 10px;
-    border-radius: 6px;
     color: #e8eef3;
-    font-weight: 700;
     text-decoration: none;
 }
 
 .primary-navigation a:hover,
 .primary-navigation a:focus-visible {
-    background: rgb(255 255 255 / 10%);
+    background: #ffffff1a;
     color: var(--white);
 }
 
@@ -211,7 +254,7 @@ button {
     position: absolute;
     z-index: -1;
     inset: 0;
-    background: linear-gradient(180deg, rgb(8 29 45 / 12%) 12%, rgb(8 29 45 / 90%) 100%);
+    background: linear-gradient(180deg, #081d2d1f 12%, #081d2de6 100%);
     content: "";
 }
 
@@ -229,12 +272,18 @@ button {
     width: min(100% - 32px, 1180px);
     margin-inline: auto;
     padding-block: 70px 54px;
-    color: var(--white);
+}
+
+.eyebrow,
+.event-type,
+.event-list time,
+.membership-badge,
+.level-price {
+    color: var(--gold-dark);
 }
 
 .eyebrow {
     margin: 0 0 7px;
-    color: var(--gold-dark);
     font-size: 0.72rem;
     font-weight: 800;
     letter-spacing: 0.13em;
@@ -262,7 +311,6 @@ h3 {
 .hero h1 {
     max-width: 700px;
     margin: 0;
-    color: var(--white);
     font-size: clamp(2.3rem, 10vw, 5.2rem);
     letter-spacing: -0.055em;
 }
@@ -274,21 +322,25 @@ h3 {
     font-size: 1rem;
 }
 
+.button,
+.forecast-list li,
+.directory-toolbar button {
+    border-radius: 7px;
+}
+
 .button {
     display: inline-flex;
     justify-content: center;
     min-height: 46px;
     align-items: center;
     padding: 11px 20px;
-    border-radius: 7px;
     font-weight: 800;
     text-decoration: none;
 }
 
 .button-primary {
     background: var(--gold);
-    color: var(--navy);
-    box-shadow: 0 8px 22px rgb(0 0 0 / 22%);
+    box-shadow: 0 8px 22px #00000038;
 }
 
 .button-primary:hover,
@@ -313,12 +365,49 @@ h3 {
 }
 
 .content-card,
+.spotlights,
+.member-card,
+.directory-toolbar button,
+.social-links a,
+.application-panel,
+.level-card,
+.membership-dialog,
+.discover-card,
+.photo-credits {
+    background: var(--white);
+}
+
+.content-card,
+.spotlights,
+.member-card,
+.application-panel,
+.level-card,
+.membership-dialog,
+.discover-card,
+.photo-credits {
+    border: 1px solid var(--line);
+}
+
+.content-card,
+.spotlights,
+.application-panel,
+.level-card,
+.membership-dialog,
+.discover-card {
+    border-radius: var(--radius);
+}
+
+.content-card,
+.spotlights,
+.application-panel,
+.membership-dialog,
+.discover-card {
+    box-shadow: var(--shadow);
+}
+
+.content-card,
 .spotlights {
     padding: 24px;
-    border: 1px solid var(--line);
-    border-radius: var(--radius);
-    background: var(--white);
-    box-shadow: var(--shadow);
 }
 
 .section-heading {
@@ -341,9 +430,16 @@ h3 {
     letter-spacing: -0.035em;
 }
 
+.text-link,
+.member-details a,
+.community-overview a,
+.photo-credits a,
+#place-source {
+    color: var(--navy-light);
+}
+
 .text-link {
     flex: 0 0 auto;
-    color: var(--navy-light);
     font-size: 0.8rem;
     font-weight: 800;
     text-underline-offset: 4px;
@@ -351,7 +447,7 @@ h3 {
 
 .featured-event {
     display: grid;
-    grid-template-columns: 58px 1fr;
+    grid-template-columns: 58px minmax(0, 1fr);
     gap: 16px;
     padding-bottom: 22px;
     border-bottom: 1px solid var(--line);
@@ -362,9 +458,6 @@ h3 {
     flex-direction: column;
     justify-content: center;
     height: 66px;
-    border-radius: 8px;
-    background: var(--navy);
-    color: var(--white);
     font-size: 0.68rem;
     font-weight: 800;
     line-height: 1.1;
@@ -379,7 +472,6 @@ h3 {
 
 .event-type {
     margin: 0 0 4px;
-    color: var(--gold-dark);
     font-size: 0.67rem;
     font-weight: 800;
     letter-spacing: 0.08em;
@@ -403,7 +495,6 @@ h3 {
 
 .featured-event .event-meta {
     margin-bottom: 0;
-    color: var(--slate);
 }
 
 .event-list {
@@ -412,13 +503,12 @@ h3 {
 
 .event-list article {
     display: grid;
-    grid-template-columns: 58px 1fr;
+    grid-template-columns: 58px minmax(0, 1fr);
     gap: 16px;
     padding-top: 18px;
 }
 
 .event-list time {
-    color: var(--gold-dark);
     font-size: 0.72rem;
     font-weight: 800;
     text-transform: uppercase;
@@ -439,8 +529,6 @@ h3 {
     grid-column: 1 / -1;
     margin: 0;
     padding: 24px;
-    border-radius: 8px;
-    background: var(--mist);
     color: var(--muted);
     text-align: center;
 }
@@ -462,7 +550,6 @@ h3 {
 
 .current-temperature {
     margin: 0;
-    color: var(--navy);
     font-size: 2.2rem;
     font-weight: 800;
     line-height: 1;
@@ -477,7 +564,6 @@ h3 {
 
 .forecast-title {
     margin: 0 0 10px;
-    color: var(--navy);
     font-size: 0.78rem;
     letter-spacing: 0.08em;
     text-transform: uppercase;
@@ -494,8 +580,6 @@ h3 {
 
 .forecast-list li {
     padding: 11px 5px;
-    border-radius: 7px;
-    background: var(--mist);
     text-align: center;
 }
 
@@ -507,12 +591,10 @@ h3 {
 .forecast-list time {
     color: var(--muted);
     font-size: 0.67rem;
-    font-weight: 700;
 }
 
 .forecast-list strong {
     margin-top: 4px;
-    color: var(--navy);
     font-size: 1.04rem;
 }
 
@@ -541,9 +623,7 @@ h3 {
     grid-template-rows: auto auto 1fr;
     min-width: 0;
     overflow: hidden;
-    border: 1px solid var(--line);
     border-radius: 10px;
-    background: var(--white);
 }
 
 .member-card-header {
@@ -560,6 +640,7 @@ h3 {
     border-radius: 9px;
 }
 
+.member-card h2,
 .member-card h3 {
     margin: 0;
     font-size: 1rem;
@@ -577,7 +658,6 @@ h3 {
     padding: 4px 9px;
     border-radius: 999px;
     background: #fff3cf;
-    color: var(--gold-dark);
     font-size: 0.63rem;
     font-weight: 800;
     letter-spacing: 0.08em;
@@ -596,41 +676,12 @@ h3 {
 }
 
 .member-details a {
-    color: var(--navy-light);
-    font-weight: 700;
     overflow-wrap: anywhere;
 }
 
 .directory-main {
     min-height: 55vh;
     padding-block: 38px 56px;
-}
-
-.placeholder-main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    min-height: 58vh;
-    width: min(100% - 32px, 760px);
-    margin-inline: auto;
-    padding-block: 64px;
-}
-
-.placeholder-main h1 {
-    max-width: 700px;
-    margin: 0;
-    font-size: clamp(2.2rem, 9vw, 4.3rem);
-    letter-spacing: -0.055em;
-}
-
-.placeholder-main > p:not(.eyebrow) {
-    max-width: 650px;
-    margin: 18px 0 28px;
-    color: var(--muted);
-}
-
-.placeholder-main .button {
-    align-self: flex-start;
 }
 
 .directory-intro {
@@ -659,9 +710,6 @@ h3 {
     min-width: 104px;
     padding: 9px 15px;
     border: 1px solid var(--navy);
-    border-radius: 7px;
-    background: var(--white);
-    color: var(--navy);
     font-weight: 800;
     cursor: pointer;
 }
@@ -681,7 +729,6 @@ h3 {
 }
 
 .directory-grid.list-view .member-card {
-    display: grid;
     grid-template-columns: 1fr;
     margin-bottom: 10px;
     border-radius: 5px;
@@ -693,7 +740,6 @@ h3 {
 
 .site-footer {
     padding: 32px 16px 18px;
-    background: var(--navy);
     color: #d9e2ec;
 }
 
@@ -711,7 +757,6 @@ h3 {
 }
 
 .footer-contact strong {
-    color: var(--white);
     font-size: 0.84rem;
 }
 
@@ -739,9 +784,8 @@ h3 {
     width: 45px;
     height: 45px;
     place-items: center;
-    border: 1px solid rgb(255 255 255 / 28%);
+    border: 1px solid #ffffff47;
     border-radius: 50%;
-    background: var(--white);
 }
 
 .footer-meta p {
@@ -758,7 +802,7 @@ h3 {
     width: min(100%, 1180px);
     margin: 24px auto 0;
     padding-top: 13px;
-    border-top: 1px solid rgb(255 255 255 / 14%);
+    border-top: 1px solid #ffffff24;
     color: #9fb3c4;
     font-size: 0.62rem;
     text-align: center;
@@ -769,27 +813,10 @@ h3 {
     outline-offset: 3px;
 }
 
-[hidden] {
-    display: none !important;
-}
-
 @media (max-width: 699px) {
-    .masthead .menu-toggle {
-        display: grid !important;
-    }
-
-    .featured-event {
-        grid-template-columns: 58px minmax(0, 1fr);
-    }
-
     .featured-event h3 {
         font-size: 1rem;
     }
-}
-
-.member-card h2 {
-    margin: 0;
-    font-size: 1rem;
 }
 
 .member-details,
@@ -835,10 +862,6 @@ h3 {
 .application-panel {
     min-width: 0;
     padding: clamp(18px, 3vw, 32px);
-    border: 1px solid var(--line);
-    border-radius: var(--radius);
-    background: var(--white);
-    box-shadow: var(--shadow);
 }
 
 .application-panel h2,
@@ -866,7 +889,6 @@ h3 {
     margin-bottom: 18px;
     padding: 0 0 8px;
     border-bottom: 1px solid var(--line);
-    color: var(--navy);
     font-weight: 800;
 }
 
@@ -874,7 +896,6 @@ h3 {
     display: block;
     margin-bottom: 18px;
     font-size: 0.9rem;
-    font-weight: 700;
 }
 
 .membership-form input:not([type="hidden"], [type="submit"]),
@@ -932,10 +953,7 @@ h3 {
 .level-card {
     margin-top: 16px;
     padding: 22px;
-    border: 1px solid var(--line);
     border-left: 5px solid var(--navy-light);
-    border-radius: var(--radius);
-    background: var(--white);
     animation: welcome-card 550ms ease-out both;
 }
 
@@ -966,7 +984,6 @@ h3 {
 }
 
 .level-price {
-    color: var(--gold-dark);
     font-weight: 800;
 }
 
@@ -975,10 +992,6 @@ h3 {
     min-height: 44px;
     padding: 9px 14px;
     border: 1px solid var(--navy);
-    border-radius: 6px;
-    background: var(--navy);
-    color: var(--white);
-    font-weight: 700;
     cursor: pointer;
 }
 
@@ -993,15 +1006,10 @@ h3 {
     margin: auto;
     padding: 28px;
     overflow-y: auto;
-    border: 1px solid var(--line);
-    border-radius: var(--radius);
-    background: var(--white);
-    color: var(--slate);
-    box-shadow: var(--shadow);
 }
 
 .membership-dialog::backdrop {
-    background: rgb(8 29 45 / 72%);
+    background: #081d2db8;
 }
 
 .membership-dialog h2 {
@@ -1043,7 +1051,6 @@ h3 {
 .application-details dt {
     color: var(--muted);
     font-size: 0.85rem;
-    font-weight: 700;
 }
 
 .application-details dd {
@@ -1058,7 +1065,6 @@ h3 {
 }
 
 .return-link {
-    color: var(--navy);
     text-decoration: underline;
     text-underline-offset: 4px;
 }
@@ -1092,9 +1098,6 @@ h3 {
     margin-bottom: 24px;
     padding: 16px 20px;
     border-left: 5px solid var(--gold);
-    border-radius: 8px;
-    background: var(--navy);
-    color: var(--white);
 }
 
 .visit-message p {
@@ -1108,13 +1111,11 @@ h3 {
 
 .community-overview h2 {
     margin-bottom: 8px;
-    color: var(--navy);
 }
 
 .community-overview a,
 .photo-credits a,
 #place-source {
-    color: var(--navy-light);
     text-underline-offset: 3px;
 }
 
@@ -1126,24 +1127,19 @@ h3 {
 .discover-card {
     display: grid;
     grid-template-areas:
-        "name"
-        "photo"
-        "address"
-        "description"
-        "action";
+    "name"
+    "photo"
+    "address"
+    "description"
+    "action";
     gap: 16px;
     padding: 20px;
-    border: 1px solid var(--line);
-    border-radius: var(--radius);
-    background: var(--white);
-    box-shadow: var(--shadow);
     overflow: hidden;
 }
 
 .discover-card h2 {
     grid-area: name;
     margin: 0;
-    color: var(--navy);
     font-size: 1.25rem;
     line-height: 1.4;
 }
@@ -1153,7 +1149,6 @@ h3 {
     margin: 0;
     align-self: start;
     overflow: hidden;
-    border-radius: 8px;
 }
 
 .discover-card img {
@@ -1183,15 +1178,11 @@ h3 {
 .photo-credits {
     margin-top: 32px;
     padding: 18px;
-    border: 1px solid var(--line);
-    border-radius: 8px;
-    background: var(--white);
     overflow-wrap: anywhere;
 }
 
 .photo-credits summary {
     min-height: 28px;
-    font-weight: 700;
     cursor: pointer;
 }
 

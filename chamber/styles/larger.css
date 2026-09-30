@@ -41,7 +41,7 @@
     }
 
     .hero::after {
-        background: linear-gradient(90deg, rgb(8 29 45 / 90%) 0%, rgb(8 29 45 / 58%) 50%, rgb(8 29 45 / 15%) 100%);
+        background: linear-gradient(90deg, #081d2de6 0%, #081d2d94 50%, #081d2d26 100%);
     }
 
     .hero-content {
@@ -109,16 +109,7 @@
     .footer-meta {
         text-align: right;
     }
-}
 
-@media (min-width: 960px) {
-    .spotlight-grid,
-    .directory-grid {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
-}
-
-@media (min-width: 700px) {
     .join-layout {
         grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
         gap: 28px;
@@ -136,6 +127,11 @@
 }
 
 @media (min-width: 960px) {
+    .spotlight-grid,
+    .directory-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
     .join-layout {
         gap: 48px;
     }
@@ -151,10 +147,10 @@
     .discover-card {
         grid-template-columns: minmax(0, 300px) minmax(0, 1fr);
         grid-template-areas:
-            "photo name"
-            "photo description"
-            "photo address"
-            "action action";
+        "photo name"
+        "photo description"
+        "photo address"
+        "action action";
         column-gap: 24px;
     }
 }
@@ -167,10 +163,10 @@
     .discover-card {
         grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
         grid-template-areas:
-            "name name"
-            "photo description"
-            "photo address"
-            "action action";
+        "name name"
+        "photo description"
+        "photo address"
+        "action action";
     }
 }
 
