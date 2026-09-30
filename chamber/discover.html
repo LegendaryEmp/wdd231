@@ -10,18 +10,17 @@
     <meta property="og:title" content="Discover Port Harcourt | Port Harcourt Chamber of Commerce">
     <meta property="og:description" content="Discover the people, places, and business opportunities that make Port Harcourt the Garden City.">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="https://legendaryemp.github.io/wdd231/chamber/images/port-harcourt-pleasure-park.jpg">
+    <meta property="og:image" content="https://legendaryemp.github.io/wdd231/chamber/images/ph-pleasure-park.jpg">
     <meta property="og:image:alt" content="The lake and green landscape at Port Harcourt Pleasure Park">
     <meta property="og:url" content="https://legendaryemp.github.io/wdd231/chamber/discover.html">
     <link rel="icon" href="images/chamber-logo.svg" type="image/svg+xml">
     <link rel="stylesheet" href="styles/reset.css">
+    <link rel="preload" href="fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/larger.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
     <script src="scripts/navigation.js" defer></script>
     <script src="scripts/dates.js" defer></script>
+    <script src="scripts/discover.js" type="module"></script>
 </head>
 
 <body>
@@ -35,11 +34,34 @@
             </nav>
         </div>
     </header>
-    <main class="placeholder-main" id="main-content">
-        <p class="eyebrow">Explore the Garden City</p>
-        <h1>Discover Port Harcourt</h1>
-        <p>This page will feature the city's history, people, landmarks, demographics, and current events in an upcoming project milestone.</p>
-        <a class="button button-primary" href="index.html">Return home</a>
+    <main class="page-shell discover-main" id="main-content">
+        <div class="directory-intro">
+            <p class="eyebrow">Explore the Garden City</p>
+            <h1>Discover Port Harcourt</h1>
+            <p>Get to know the parks, sporting venues, campuses and waterfront that connect our city. Explore eight places in Port Harcourt and its surrounding communities.</p>
+        </div>
+        <aside class="visit-message" aria-label="Your visit">
+            <p id="visit-message">Welcome! Let us know if you have any questions.</p>
+        </aside>
+        <section class="community-overview" aria-labelledby="community-heading">
+            <h2 id="community-heading">A place to connect</h2>
+            <p>Port Harcourt is the capital of Rivers State in the Niger Delta. Businesses, students and waterfront communities contribute to its daily life. Local universities connect education and research with the region’s industries.</p>
+            <a href="https://www.uniport.edu.ng/wp-content/uploads/2025/01/Uniport_Regional_Strategy.pdf">Read about the region and its university community</a>
+        </section>
+        <div class="discover-gallery" id="discover-gallery"></div>
+        <noscript><p>Enable JavaScript to view the eight places and their details.</p></noscript>
+        <details class="photo-credits">
+            <summary>Photo credits</summary>
+            <p>These photographs have been cropped and resized. Each image retains the license linked below.</p>
+            <ul id="photo-credits"></ul>
+        </details>
+        <dialog class="membership-dialog" id="place-details" aria-labelledby="place-title">
+            <h2 id="place-title"></h2>
+            <p id="place-description"></p>
+            <address id="place-address"></address>
+            <p><a id="place-source" href="https://www.phpoloclub.com/">Visit the information source</a></p>
+            <button class="dialog-close" type="button">Close details</button>
+        </dialog>
     </main>
     <footer class="site-footer">
         <div class="footer-content">

@@ -1,3 +1,11 @@
+@font-face {
+    font-family: "Manrope";
+    font-style: normal;
+    font-weight: 200 800;
+    font-display: swap;
+    src: url("../fonts/manrope-latin.woff2") format("woff2");
+}
+
 :root {
     --navy: #102a43;
     --navy-light: #1d4867;
@@ -1074,4 +1082,139 @@ h3 {
     .level-card {
         animation: none;
     }
+}
+
+.discover-main .directory-intro {
+    margin-bottom: 24px;
+}
+
+.visit-message {
+    margin-bottom: 24px;
+    padding: 16px 20px;
+    border-left: 5px solid var(--gold);
+    border-radius: 8px;
+    background: var(--navy);
+    color: var(--white);
+}
+
+.visit-message p {
+    margin: 0;
+}
+
+.community-overview {
+    margin-bottom: 28px;
+    max-width: 850px;
+}
+
+.community-overview h2 {
+    margin-bottom: 8px;
+    color: var(--navy);
+}
+
+.community-overview a,
+.photo-credits a,
+#place-source {
+    color: var(--navy-light);
+    text-underline-offset: 3px;
+}
+
+.discover-gallery {
+    display: grid;
+    gap: 24px;
+}
+
+.discover-card {
+    display: grid;
+    grid-template-areas:
+        "name"
+        "photo"
+        "address"
+        "description"
+        "action";
+    gap: 16px;
+    padding: 20px;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: var(--white);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+}
+
+.discover-card h2 {
+    grid-area: name;
+    margin: 0;
+    color: var(--navy);
+    font-size: 1.25rem;
+    line-height: 1.4;
+}
+
+.discover-card figure {
+    grid-area: photo;
+    margin: 0;
+    align-self: start;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.discover-card img {
+    width: 100%;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+}
+
+.discover-card address {
+    grid-area: address;
+    font-style: normal;
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+
+.discover-card > p {
+    grid-area: description;
+    margin: 0;
+}
+
+.discover-card > button {
+    grid-area: action;
+    align-self: end;
+    width: 100%;
+}
+
+.photo-credits {
+    margin-top: 32px;
+    padding: 18px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: var(--white);
+    overflow-wrap: anywhere;
+}
+
+.photo-credits summary {
+    min-height: 28px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.photo-credits ul {
+    padding-left: 22px;
+}
+
+.photo-credits li {
+    margin-block: 10px;
+}
+
+#place-address {
+    font-style: normal;
+    color: var(--muted);
+}
+
+@media (max-width: 699px) {
+    .menu-toggle[aria-expanded="false"] + .primary-navigation {
+        display: none;
+    }
+}
+
+.discover-gallery:empty,
+.directory-grid > .loading-message {
+    min-height: 100vh;
 }

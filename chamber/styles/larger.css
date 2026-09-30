@@ -146,3 +146,47 @@
         gap: 18px;
     }
 }
+
+@media (min-width: 641px) {
+    .discover-card {
+        grid-template-columns: minmax(0, 300px) minmax(0, 1fr);
+        grid-template-areas:
+            "photo name"
+            "photo description"
+            "photo address"
+            "action action";
+        column-gap: 24px;
+    }
+}
+
+@media (min-width: 1025px) {
+    .discover-gallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .discover-card {
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        grid-template-areas:
+            "name name"
+            "photo description"
+            "photo address"
+            "action action";
+    }
+}
+
+@media (min-width: 641px) and (hover: hover) and (pointer: fine) {
+    .discover-card img {
+        transition: transform 250ms ease, filter 250ms ease;
+    }
+
+    .discover-card figure:hover img {
+        transform: scale(1.04);
+        filter: saturate(1.2);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .discover-card img {
+        transition: none;
+    }
+}
