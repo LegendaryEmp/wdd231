@@ -12,7 +12,7 @@ body {
     margin: 0;
     background-color: var(--cream);
     color: var(--brown);
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', Arial, sans-serif;
     line-height: 1.6;
 }
 
@@ -20,7 +20,7 @@ h1,
 h2,
 h3 {
     color: var(--green);
-    font-family: Georgia, serif;
+    font-family: 'Lora', Georgia, serif;
     line-height: 1.3;
 }
 
