@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Meal Suggestion | Nigerian Kitchen</title>
+    <meta name="description" content="Review the Nigerian meal suggestion you entered, including the meal name, category, description, and your contact information.">
+    <meta name="author" content="Jacob Okwusi Mbabo">
+    <meta property="og:title" content="Your Meal Suggestion | Nigerian Kitchen">
+    <meta property="og:description" content="Review the Nigerian meal suggestion you entered, including the meal name, category, description, and your contact information.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://legendaryemp.github.io/wdd231/final/thankyou.html">
+    <meta property="og:image" content="https://legendaryemp.github.io/wdd231/final/images/egusi-soup.webp">
+    <meta property="og:image:alt" content="Egusi soup served with pounded yam">
+    <script>document.documentElement.classList.add('js');</script>
+    <link rel="icon" href="images/bowl.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <script type="module" src="scripts/main.js"></script>
+    <script type="module" src="scripts/thankyou.js"></script>
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <header class="site-header">
+        <div class="header-content">
+            <a class="brand" href="index.html">
+                <img src="images/bowl.svg" alt="" width="40" height="40">
+                <span>Nigerian Kitchen</span>
+            </a>
+            <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="primary-navigation" hidden>
+                <span aria-hidden="true">☰</span>
+            </button>
+            <nav id="primary-navigation" aria-label="Primary navigation">
+                <a href="index.html">Home</a>
+                <a href="meals.html">Meal Gallery</a>
+                <a href="suggest.html">Suggest a Meal</a>
+            </nav>
+        </div>
+    </header>
+    <main id="main-content">
+        <div class="page-heading">
+            <p class="eyebrow">Your suggestion</p>
+            <h1>Thank you for sharing a meal</h1>
+            <p id="confirmation-message">Here is the information you entered. This is a preview; nothing has been sent or saved to a server.</p>
+        </div>
+        <section class="confirmation" aria-labelledby="summary-title">
+            <h2 id="summary-title">Suggestion details</h2>
+            <dl id="suggestion-details"></dl>
+            <noscript><p>Enable JavaScript to display the information from your form.</p></noscript>
+        </section>
+        <div class="confirmation-links">
+            <a class="button" href="meals.html">Back to the gallery</a>
+            <a href="suggest.html">Suggest another meal</a>
+        </div>
+    </main>
+    <footer class="site-footer">
+        <div class="footer-content">
+            <p>© <span id="year"></span> Nigerian Kitchen · Jacob Okwusi Mbabo</p>
+            <div class="footer-links">
+                <a href="attributions.html">Attributions</a>
+                <a href="siteplan.html">Site Plan</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

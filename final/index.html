@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover Nigerian Meals | Nigerian Kitchen</title>
+    <meta name="description" content="Get to know Nigerian meals through their names, photos, and simple descriptions. Explore rice dishes, soups, snacks, and more.">
+    <meta name="author" content="Jacob Okwusi Mbabo">
+    <meta property="og:title" content="Discover Nigerian Meals | Nigerian Kitchen">
+    <meta property="og:description" content="Get to know Nigerian meals through their names, photos, and simple descriptions. Explore rice dishes, soups, snacks, and more.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://legendaryemp.github.io/wdd231/final/index.html">
+    <meta property="og:image" content="https://legendaryemp.github.io/wdd231/final/images/egusi-soup.webp">
+    <meta property="og:image:alt" content="Egusi soup served with pounded yam">
+    <script>document.documentElement.classList.add('js');</script>
+    <link rel="icon" href="images/bowl.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <script type="module" src="scripts/main.js"></script>
+    <script type="module" src="scripts/meals.js"></script>
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <header class="site-header">
+        <div class="header-content">
+            <a class="brand" href="index.html">
+                <img src="images/bowl.svg" alt="" width="40" height="40">
+                <span>Nigerian Kitchen</span>
+            </a>
+            <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="primary-navigation" hidden>
+                <span aria-hidden="true">☰</span>
+            </button>
+            <nav id="primary-navigation" aria-label="Primary navigation">
+                <a href="index.html" aria-current="page">Home</a>
+                <a href="meals.html">Meal Gallery</a>
+                <a href="suggest.html">Suggest a Meal</a>
+            </nav>
+        </div>
+    </header>
+    <main id="main-content">
+        <section class="welcome" aria-labelledby="welcome-title">
+            <p class="eyebrow">A small introduction to Nigerian food</p>
+            <h1 id="welcome-title">Discover Nigerian<br>meals.</h1>
+            <p>From jollof rice to egusi soup, discover familiar favorites and meals you may be seeing for the first time.</p>
+            <a class="button" href="meals.html">Explore the meal gallery</a>
+        </section>
+        <section class="featured" aria-labelledby="featured-title">
+            <div class="section-heading">
+                <div>
+                    <h2 id="featured-title">A few meals to start with</h2>
+                    <p>Three different dishes, each with its own name and character.</p>
+                </div>
+                <a href="meals.html">View all 15 meals →</a>
+            </div>
+            <p id="meal-status" role="status">Loading featured meals…</p>
+            <div id="meal-grid" class="meal-grid" data-featured="true" aria-busy="true"></div>
+            <noscript><p>Enable JavaScript to load the meal photos and descriptions.</p></noscript>
+        </section>
+        <section class="suggest-banner" aria-labelledby="suggest-title">
+            <div>
+                <h2 id="suggest-title">What meal would you add?</h2>
+                <p>There are many more Nigerian meals to discover. Make a suggestion for the gallery.</p>
+            </div>
+            <a class="button" href="suggest.html">Suggest a meal</a>
+        </section>
+        <dialog id="meal-dialog" aria-labelledby="dialog-title">
+            <button class="dialog-close" type="button" aria-label="Close meal details" autofocus>Close ×</button>
+            <h2 id="dialog-title">Meal details</h2>
+            <p id="dialog-category" class="category"></p>
+            <p id="dialog-description"></p>
+            <h3>How it is enjoyed</h3>
+            <p id="dialog-serving"></p>
+        </dialog>
+    </main>
+    <footer class="site-footer">
+        <div class="footer-content">
+            <p>© <span id="year"></span> Nigerian Kitchen · Jacob Okwusi Mbabo</p>
+            <div class="footer-links">
+                <a href="attributions.html">Attributions</a>
+                <a href="siteplan.html">Site Plan</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+

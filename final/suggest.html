@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suggest a Meal | Nigerian Kitchen</title>
+    <meta name="description" content="Suggest a Nigerian meal for the gallery. Enter its name, category, and a short description, then review your information on the next page.">
+    <meta name="author" content="Jacob Okwusi Mbabo">
+    <meta property="og:title" content="Suggest a Meal | Nigerian Kitchen">
+    <meta property="og:description" content="Suggest a Nigerian meal for the gallery. Enter its name, category, and a short description, then review your information on the next page.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://legendaryemp.github.io/wdd231/final/suggest.html">
+    <meta property="og:image" content="https://legendaryemp.github.io/wdd231/final/images/egusi-soup.webp">
+    <meta property="og:image:alt" content="Egusi soup served with pounded yam">
+    <script>document.documentElement.classList.add('js');</script>
+    <link rel="icon" href="images/bowl.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <script type="module" src="scripts/main.js"></script>
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <header class="site-header">
+        <div class="header-content">
+            <a class="brand" href="index.html">
+                <img src="images/bowl.svg" alt="" width="40" height="40">
+                <span>Nigerian Kitchen</span>
+            </a>
+            <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="primary-navigation" hidden>
+                <span aria-hidden="true">☰</span>
+            </button>
+            <nav id="primary-navigation" aria-label="Primary navigation">
+                <a href="index.html">Home</a>
+                <a href="meals.html">Meal Gallery</a>
+                <a href="suggest.html" aria-current="page">Suggest a Meal</a>
+            </nav>
+        </div>
+    </header>
+    <main id="main-content">
+        <div class="page-heading">
+            <p class="eyebrow">Help the gallery grow</p>
+            <h1>Suggest a Meal</h1>
+            <p>Know a meal that is missing? Tell us its name and a little about it.</p>
+        </div>
+        <div class="suggest-layout">
+            <form action="thankyou.html" method="get" class="suggest-form">
+                <p>All fields are required unless marked optional.</p>
+                <div class="form-fields">
+                    <label>Your name
+                        <input id="visitor-name" name="visitor" type="text" title="Enter your name" autocomplete="name" maxlength="80" required>
+                    </label>
+                    <label>Email address
+                        <input id="visitor-email" name="email" type="email" title="Enter your email address" autocomplete="email" placeholder="name@example.com" maxlength="120" required>
+                    </label>
+                    <label>Meal name
+                        <input id="meal-name" name="meal" type="text" title="Enter the name of the Nigerian meal" autocomplete="off" maxlength="80" required>
+                    </label>
+                    <label>Category
+                        <select id="meal-category" name="category" title="Choose a meal category" autocomplete="off" required>
+                            <option value="">Choose a category</option>
+                            <option value="Rice">Rice</option>
+                            <option value="Soups">Soups</option>
+                            <option value="Beans">Beans</option>
+                            <option value="Snacks &amp; Sides">Snacks &amp; Sides</option>
+                            <option value="Swallows">Swallows</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </label>
+                    <label class="full-width">Short description
+                        <textarea id="meal-description" name="description" title="Briefly describe the meal" autocomplete="off" rows="5" maxlength="500" required></textarea>
+                    </label>
+                    <label class="full-width">Another name or area it is known in (optional)
+                        <input id="meal-area" name="area" type="text" title="Add another name or an area, if you know one" autocomplete="off" maxlength="120">
+                    </label>
+                </div>
+                <p class="form-note">This practice form lets you review your suggestion on the next page. It does not send an email or save your details to a server.</p>
+                <button type="submit">Review my suggestion</button>
+            </form>
+            <aside class="suggest-guide" aria-labelledby="guide-title">
+                <h2 id="guide-title">Keep it simple</h2>
+                <p>The gallery is about recognizing meals and learning their names.</p>
+                <ul>
+                    <li>Use the name you know the meal by.</li>
+                    <li>Describe what it looks like or its main ingredients.</li>
+                    <li>Share another name if it has one.</li>
+                </ul>
+                <p>You do not need to provide a full recipe.</p>
+                <img src="images/puff-puff.webp" alt="Golden puff puff with soft, round centers" width="400" height="300" loading="lazy">
+                <p>Already in the gallery: Puff Puff</p>
+                <a href="meals.html">Check the gallery first →</a>
+            </aside>
+        </div>
+    </main>
+    <footer class="site-footer">
+        <div class="footer-content">
+            <p>© <span id="year"></span> Nigerian Kitchen · Jacob Okwusi Mbabo</p>
+            <div class="footer-links">
+                <a href="attributions.html">Attributions</a>
+                <a href="siteplan.html">Site Plan</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,137 @@
+[
+  {
+    "id": "jollof-rice",
+    "name": "Jollof Rice",
+    "image": "images/jollof-rice.webp",
+    "alt": "Orange-red jollof rice in a serving container",
+    "category": "Rice",
+    "description": "Rice cooked in a seasoned tomato and pepper sauce, giving it its familiar orange-red color.",
+    "serving": "Often served with chicken, fried plantain, or moi moi."
+  },
+  {
+    "id": "egusi-soup",
+    "name": "Egusi Soup",
+    "image": "images/egusi-soup.webp",
+    "alt": "Egusi soup with pounded yam and assorted meat",
+    "category": "Soups",
+    "description": "A thick soup made with ground melon seeds, leafy vegetables, and meat or fish.",
+    "serving": "Often eaten with eba or pounded yam."
+  },
+  {
+    "id": "moi-moi",
+    "name": "Moi Moi",
+    "image": "images/moi-moi.webp",
+    "alt": "Moi moi served with a red stew",
+    "category": "Beans",
+    "description": "A soft, steamed bean pudding made from peeled beans, peppers, and onions.",
+    "serving": "Enjoyed on its own or alongside rice or pap."
+  },
+  {
+    "id": "fried-rice",
+    "name": "Nigerian Fried Rice",
+    "image": "images/fried-rice.webp",
+    "alt": "Fried rice with vegetables and chicken",
+    "category": "Rice",
+    "description": "Seasoned rice mixed with vegetables such as carrots, green peas, and sweet corn.",
+    "serving": "Commonly served with chicken and salad."
+  },
+  {
+    "id": "ofada-rice",
+    "name": "Ofada Rice",
+    "image": "images/ofada-rice.webp",
+    "alt": "Ofada rice and pepper stew served on a leaf",
+    "category": "Rice",
+    "description": "A Nigerian rice variety with a distinctive aroma, commonly served with a pepper stew.",
+    "serving": "Sometimes presented on a leaf with stew on top."
+  },
+  {
+    "id": "ogbono-soup",
+    "name": "Ogbono Soup",
+    "image": "images/ogbono-soup.webp",
+    "alt": "A bowl of ogbono soup with assorted meat",
+    "category": "Soups",
+    "description": "A rich, stretchy soup thickened with ground ogbono seeds and cooked with meat or fish.",
+    "serving": "Usually paired with a swallow such as eba."
+  },
+  {
+    "id": "efo-riro",
+    "name": "Efo Riro",
+    "image": "images/efo-riro.webp",
+    "alt": "Efo riro with leafy vegetables and red pepper sauce",
+    "category": "Soups",
+    "description": "A leafy vegetable stew cooked with peppers, palm oil, and meat or fish.",
+    "serving": "Often served with pounded yam, eba, or rice."
+  },
+  {
+    "id": "okra-soup",
+    "name": "Okra Soup",
+    "image": "images/okra-soup.webp",
+    "alt": "Chopped okra soup lifted with a serving spoon",
+    "category": "Soups",
+    "description": "A soup made with chopped okra, known for its slightly stretchy texture.",
+    "serving": "Enjoyed with a swallow and meat or fish."
+  },
+  {
+    "id": "afang-soup",
+    "name": "Afang Soup",
+    "image": "images/afang-soup.webp",
+    "alt": "A bowl of afang soup with leafy vegetables and meat",
+    "category": "Soups",
+    "description": "A vegetable soup made with afang leaves and waterleaf, often including meat and seafood.",
+    "serving": "Commonly eaten with eba or another swallow."
+  },
+  {
+    "id": "akara",
+    "name": "Akara",
+    "image": "images/akara.webp",
+    "alt": "Golden akara bean fritters on a plate",
+    "category": "Beans",
+    "description": "Golden bean fritters made from ground peeled beans, peppers, and onions.",
+    "serving": "A familiar breakfast pairing is akara with pap."
+  },
+  {
+    "id": "puff-puff",
+    "name": "Puff Puff",
+    "image": "images/puff-puff.webp",
+    "alt": "Round, golden puff puff on a white plate",
+    "category": "Snacks & Sides",
+    "description": "Small, round pieces of yeast dough fried until golden, with a soft center.",
+    "serving": "Enjoyed as a snack or as part of small chops."
+  },
+  {
+    "id": "suya",
+    "name": "Suya",
+    "image": "images/suya.webp",
+    "alt": "Seasoned suya skewers cooking over a grill",
+    "category": "Snacks & Sides",
+    "description": "Grilled meat coated with a spicy seasoning, often cooked on skewers.",
+    "serving": "Commonly served with sliced onions and pepper."
+  },
+  {
+    "id": "dodo",
+    "name": "Dodo",
+    "image": "images/dodo.webp",
+    "alt": "A plate of golden fried plantain slices",
+    "category": "Snacks & Sides",
+    "description": "Slices of ripe plantain fried until golden, with a naturally sweet taste.",
+    "serving": "Often served beside rice or beans."
+  },
+  {
+    "id": "boli",
+    "name": "Boli",
+    "image": "images/boli.webp",
+    "alt": "Roasted plantain beside groundnuts at a food stall",
+    "category": "Snacks & Sides",
+    "description": "Roasted plantain, also called bole, with a lightly charred outside and soft center.",
+    "serving": "Enjoyed with groundnuts or pepper sauce and fish."
+  },
+  {
+    "id": "eba",
+    "name": "Eba",
+    "image": "images/eba.webp",
+    "alt": "A serving of eba beside fish banga soup",
+    "category": "Swallows",
+    "description": "A firm, smooth swallow made by stirring garri into hot water.",
+    "serving": "Served with soups such as egusi, okra, or banga."
+  }
+]

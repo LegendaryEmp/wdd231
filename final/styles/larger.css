@@ -1,0 +1,22 @@
+@media (min-width: 38rem) {
+    .meal-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .form-fields { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .full-width { grid-column: 1 / -1; }
+    .section-heading { display: flex; justify-content: space-between; align-items: center; gap: 2rem; }
+    .section-heading > a { flex-shrink: 0; }
+    .suggest-banner { grid-template-columns: 1fr auto; align-items: center; }
+    .confirmation dl { display: grid; grid-template-columns: 11rem 1fr; gap: 1rem; }
+    .confirmation dd { margin: 0; }
+}
+@media (min-width: 48rem) {
+    .brand { font-size: 1.25rem; }
+    .menu-toggle { display: none; }
+    #primary-navigation, .js #primary-navigation, .js #primary-navigation.open { display: flex; width: auto; gap: .25rem; }
+    .header-content, main, .footer-content { padding-left: 2rem; padding-right: 2rem; }
+    .suggest-layout { grid-template-columns: 2fr 1fr; align-items: start; }
+    .suggest-form, .suggest-guide { padding: 1.5rem; }
+}
+@media (min-width: 62rem) {
+    .meal-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meal Gallery | Nigerian Kitchen</title>
+    <meta name="description" content="Browse 15 Nigerian meals with photos, names, categories, and short descriptions. Filter the gallery and learn how each meal is enjoyed.">
+    <meta name="author" content="Jacob Okwusi Mbabo">
+    <meta property="og:title" content="Meal Gallery | Nigerian Kitchen">
+    <meta property="og:description" content="Browse 15 Nigerian meals with photos, names, categories, and short descriptions. Filter the gallery and learn how each meal is enjoyed.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://legendaryemp.github.io/wdd231/final/meals.html">
+    <meta property="og:image" content="https://legendaryemp.github.io/wdd231/final/images/egusi-soup.webp">
+    <meta property="og:image:alt" content="Egusi soup served with pounded yam">
+    <script>document.documentElement.classList.add('js');</script>
+    <link rel="icon" href="images/bowl.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <script type="module" src="scripts/main.js"></script>
+    <script type="module" src="scripts/meals.js"></script>
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <header class="site-header">
+        <div class="header-content">
+            <a class="brand" href="index.html">
+                <img src="images/bowl.svg" alt="" width="40" height="40">
+                <span>Nigerian Kitchen</span>
+            </a>
+            <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="primary-navigation" hidden>
+                <span aria-hidden="true">☰</span>
+            </button>
+            <nav id="primary-navigation" aria-label="Primary navigation">
+                <a href="index.html">Home</a>
+                <a href="meals.html" aria-current="page">Meal Gallery</a>
+                <a href="suggest.html">Suggest a Meal</a>
+            </nav>
+        </div>
+    </header>
+    <main id="main-content">
+        <div class="page-heading">
+            <p class="eyebrow">Names, pictures, and a little about each meal</p>
+            <h1>Meal Gallery</h1>
+            <p>Get to know 15 Nigerian dishes. Choose a category or explore the whole gallery.</p>
+        </div>
+        <div class="gallery-tools">
+            <label>Show meals
+                <select id="category-filter" name="category" disabled>
+                    <option value="all">All meals</option>
+                    <option value="Rice">Rice</option>
+                    <option value="Soups">Soups</option>
+                    <option value="Beans">Beans</option>
+                    <option value="Snacks &amp; Sides">Snacks &amp; Sides</option>
+                    <option value="Swallows">Swallows</option>
+                </select>
+            </label>
+            <p id="meal-status" role="status">Loading meals…</p>
+        </div>
+        <div id="meal-grid" class="meal-grid" aria-busy="true"></div>
+        <noscript><p>Enable JavaScript to load and filter the meal gallery.</p></noscript>
+        <dialog id="meal-dialog" aria-labelledby="dialog-title">
+            <button class="dialog-close" type="button" aria-label="Close meal details" autofocus>Close ×</button>
+            <h2 id="dialog-title">Meal details</h2>
+            <p id="dialog-category" class="category"></p>
+            <p id="dialog-description"></p>
+            <h3>How it is enjoyed</h3>
+            <p id="dialog-serving"></p>
+        </dialog>
+    </main>
+    <footer class="site-footer">
+        <div class="footer-content">
+            <p>© <span id="year"></span> Nigerian Kitchen · Jacob Okwusi Mbabo</p>
+            <div class="footer-links">
+                <a href="attributions.html">Attributions</a>
+                <a href="siteplan.html">Site Plan</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
