@@ -124,6 +124,14 @@ footer {
     text-align: center;
 }
 
+footer a {
+    color: var(--cream);
+}
+
+footer a:focus-visible {
+    outline-color: var(--cream);
+}
+
 @media (min-width: 700px) {
     section {
         padding: 28px;
